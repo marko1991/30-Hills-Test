@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Hills Test</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id="section1">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link brend-style" href="#section3"><strong id="navbar-h1"><em>30 Hills Test - Front End</em></strong></a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active" role="presentation"><a href="#section3"><strong>Direct friends </strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="section2">
+        <div class="jumbotron">
+            <h1> <strong>Social Network Examining</strong></h1>
+            <p><strong><em>Welcome to 30 Hills test in witch we created a Web app that provides a function to choose a person within the table, stored in database and display the following information about that person</em></strong></p>
+            <p><a class="btn btn-info btn-lg" role="button" href="#section3">Go to the test</a></p>
+        </div>
+    </div>
+    <div id="section3" class="table-intro">
+        <div class="container">
+            <h1><strong><em>Direct friends table</em></strong><em> </em><i class="fa fa-table table-icon"></i></h1>
+            <p><strong>The following table is alowing us to get a full view of our direct friends simply by clicking on their names</strong></p>
+        </div>
+    </div>
+    <div id="table1">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="table-responsive">
+                    <table id="tabelaLjudi" class="table table-bordered">
+                        <thead>
+                            <tr class="info">
+                                <th>First Name:</th>
+                                <th>Last Name:</th>
+                                <th>Age: </th>
+                                <th>Gender </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="table-responsive">
+                    <table id="tabelaDirPrijatelji" class="table">
+                        <thead>
+                            <tr class="info">
+                                <th>First Name:</th>
+                                <th>Last Name:</th>
+                                <th>Age: </th>
+                                <th>Gender </th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">Marko Marinkovic © 19.05.2017</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+  var sviljudi =
+  [
+  {
+    "id": 1,
+    "firstName": "Paul",
+    "surname": "Crowe",
+    "age": 28,
+    "gender": "male",
+    "friends": [
+      2
+    ]
+  },
+  {
+    "id": 2,
+    "firstName": "Rob",
+    "surname": "Fitz",
+    "age": 23,
+    "gender": "male",
+    "friends": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 3,
+    "firstName": "Ben",
+    "surname": "O'Carolan",
+    "age": null,
+    "gender": "male",
+    "friends": [
+      2,
+      4,
+      5,
+      7
+    ]
+  },
+  {
+    "id": 4,
+    "firstName": "Victor",
+    "surname": "",
+    "age": 28,
+    "gender": "male",
+    "friends": [
+      3
+    ]
+  },
+  {
+    "id": 5,
+    "firstName": "Peter",
+    "surname": "Mac",
+    "age": 29,
+    "gender": "male",
+    "friends": [
+      3,
+      6,
+      11,
+      10,
+      7
+    ]
+  },
+  {
+    "id": 6,
+    "firstName": "John",
+    "surname": "Barry",
+    "age": 18,
+    "gender": "male",
+    "friends": [
+      5
+    ]
+  },
+  {
+    "id": 7,
+    "firstName": "Sarah",
+    "surname": "Lane",
+    "age": 30,
+    "gender": "female",
+    "friends": [
+      3,
+      5,
+      20,
+      12,
+      8
+    ]
+  },
+  {
+    "id": 8,
+    "firstName": "Susan",
+    "surname": "Downe",
+    "age": 28,
+    "gender": "female",
+    "friends": [
+      7
+    ]
+  },
+  {
+    "id": 9,
+    "firstName": "Jack",
+    "surname": "Stam",
+    "age": 28,
+    "gender": "male",
+    "friends": [
+      12
+    ]
+  },
+  {
+    "id": 10,
+    "firstName": "Amy",
+    "surname": "Lane",
+    "age": 24,
+    "gender": "female",
+    "friends": [
+      5,
+      11
+    ]
+  },
+  {
+    "id": 11,
+    "firstName": "Sandra",
+    "surname": "Phelan",
+    "age": 28,
+    "gender": "female",
+    "friends": [
+      5,
+      10,
+      19,
+      20
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Laura",
+    "surname": "Murphy",
+    "age": 33,
+    "gender": "female",
+    "friends": [
+      7,
+      9,
+      13,
+      20
+    ]
+  },
+  {
+    "id": 13,
+    "firstName": "Lisa",
+    "surname": "Daly",
+    "age": 28,
+    "gender": "female",
+    "friends": [
+      12,
+      14,
+      20
+    ]
+  },
+  {
+    "id": 14,
+    "firstName": "Mark",
+    "surname": "Johnson",
+    "age": 28,
+    "gender": "male",
+    "friends": [
+      13,
+      15
+    ]
+  },
+  {
+    "id": 15,
+    "firstName": "Seamus",
+    "surname": "Crowe",
+    "age": 24,
+    "gender": "male",
+    "friends": [
+      14
+    ]
+  },
+  {
+    "id": 16,
+    "firstName": "Daren",
+    "surname": "Slater",
+    "age": 28,
+    "gender": "male",
+    "friends": [
+      18,
+      20
+    ]
+  },
+  {
+    "id": 17,
+    "firstName": "Dara",
+    "surname": "Zoltan",
+    "age": 48,
+    "gender": "male",
+    "friends": [
+      18,
+      20
+    ]
+  },
+  {
+    "id": 18,
+    "firstName": "Marie",
+    "surname": "D",
+    "age": 28,
+    "gender": "female",
+    "friends": [
+      17
+    ]
+  },
+  {
+    "id": 19,
+    "firstName": "Catriona",
+    "surname": "Long",
+    "age": 28,
+    "gender": "female",
+    "friends": [
+      11,
+      20
+    ]
+  },
+  {
+    "id": 20,
+    "firstName": "Katy",
+    "surname": "Couch",
+    "age": 28,
+    "gender": "female",
+    "friends": [
+      7,
+      11,
+      12,
+      13,
+      16,
+      17,
+      19
+    ]
+  }
+]
+
+function prikaziDetalje(id){
+	document.getElementById("tabelaDirPrijatelji").innerHTML ="<tr><th>First Name:</th><th>Last Name:</th><th>Age:</th><th>Gender:</th></tr>";
+	 var prijatelji;
+	 for(var i = 0; i<sviljudi.length; i++) {
+	 	if(id == sviljudi[i].id)
+	 	{
+	 		prijatelji = sviljudi[i].friends;
+	 	}
+	 }
+	
+
+	 for(var i = 0; i<prijatelji.length; i++) {
+	 	for(var j = 0; j<sviljudi.length; j++) {
+	 		if(prijatelji[i] == sviljudi[j].id)
+	 		{
+	 			out = "";
+		    	out = "<tr id='"+sviljudi[j].id+"' onclick='prikaziDetalje("+sviljudi[j].id+")'>";
+		        out += '<td>' + sviljudi[j].firstName + '</td>';
+		        out += '<td>' + sviljudi[j].surname + '</td>';
+		        out += '<td>' + sviljudi[j].age + '</td>';
+		        out += '<td>' + sviljudi[j].gender + '</td>';
+		        out += "</tr>";
+		        document.getElementById("tabelaDirPrijatelji").innerHTML += out;
+	 		}
+		 }
+	 }
+}
+
+function popuniTabelu(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i<arr.length; i++) {
+    	out = "";
+    	out = "<tr id='"+arr[i].id+"' onclick='prikaziDetalje("+arr[i].id+")'>";
+        out += '<td>' + arr[i].firstName + '</td>';
+        out += '<td>' + arr[i].surname + '</td>';
+        out += '<td>' + arr[i].age + '</td>';
+        out += '<td>' + arr[i].gender + '</td>';
+        out += "</tr>";
+        document.getElementById("tabelaLjudi").innerHTML += out;
+    }
+
+    
+  
+}
+
+popuniTabelu(sviljudi);
+  </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoot.js"></script>
+</body>
+
+</html>
